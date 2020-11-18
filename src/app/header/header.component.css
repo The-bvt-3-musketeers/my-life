@@ -1,0 +1,13 @@
+.coffee-photo {
+  width: 100vw;
+  height: auto;
+}
+.main-navbar {
+  background-color: white;
+  color: black;
+}
+.time {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
