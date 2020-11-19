@@ -1,0 +1,15 @@
+<div class="form-group container">
+  <label>NotePad</label>
+  <textarea 
+  class="form-control notepad-text-area"
+  rows="5"
+  placeholder="What's on your mind?"
+  [(ngModel)]="notepadMessage"
+  ></textarea>
+  <button
+    mat-flat-button 
+    color="Accent"
+    (click)="submitNote()"
+  >Submit</button>
+  <p class="notes"> {{ newNote }} </p>
+</div>
