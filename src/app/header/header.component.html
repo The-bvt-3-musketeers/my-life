@@ -3,30 +3,47 @@
   <mat-drawer #drawer class="example-sidenav" mode="side">
 
     <div class="icon-container">
-      <div class="row justify-content-center side-nav">
-        <img src="../../assets/weather.svg" alt="Weather icon" width="35px">
-      </div>
-      <div class="row justify-content-center">
-        <p class="icon-label">Weather</p>
-      </div>
+      <a routerLink="/" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/home.svg" alt="Weather icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Home</p>
+        </div>
+      </a>
     </div>
 
     <div class="icon-container">
-      <div class="row justify-content-center side-nav">
-        <img src="../../assets/calendar.svg" alt="Calendar icon" width="28px">
-      </div>
-      <div class="row justify-content-center">
-        <p class="icon-label">Calendar</p>
-      </div>
+      <a routerLink="/weather" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/weather.svg" alt="Weather icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Weather</p>
+        </div>
+      </a>
     </div>
 
     <div class="icon-container">
-      <div class="row justify-content-center side-nav">
-        <img src="../../assets/notepad.svg" alt="Notepad icon" width="35px">
-      </div>
-      <div class="row justify-content-center">
-        <p class="icon-label">Notes</p>
-      </div>
+      <a routerLink="/calendar" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/calendar.svg" alt="Calendar icon" width="28px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Calendar</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="icon-container">
+      <a routerLink="/notepad" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/notepad.svg" alt="Notepad icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Notepad</p>
+        </div>
+      </a>
     </div>
 
   </mat-drawer>
@@ -39,9 +56,11 @@
         <p class="menu">Menu</p>
       </div>
     </button>
+
+    <div class="row component-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
 </mat-drawer-container>
-  <div class="col time">
-    <app-date-pipe></app-date-pipe>
-  </div>
+
