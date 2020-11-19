@@ -14,6 +14,9 @@ import { CalendarComponent } from './calendar/calendar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
@@ -38,9 +41,8 @@ FullCalendarModule.registerPlugins([
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-
     FullCalendarModule,
-
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

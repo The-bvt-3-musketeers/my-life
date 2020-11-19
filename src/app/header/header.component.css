@@ -1,10 +1,41 @@
-.coffee-photo {
-  width: 100vw;
-  height: auto;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.example-container {
+  /* border: 1px solid red; */
+  width: 130px;
+  height: 100vh;
+  background-color: #bae8e8;
 }
-.main-navbar {
-  background-color: white;
-  color: black;
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: 'PT Sans', sans-serif;
+}
+
+.example-sidenav {
+  /* border: 1px solid blue; */
+  background-color: #e3f6f5;
+  width: 75px;
+  padding-top: 40px;
+}
+p.icon-label {
+  font-size: 14px;
+}
+
+button.open-nav {
+  border: none;
+  background: none;
+}
+button.open-nav:focus {
+  outline: none;
+}
+p.menu {
+  padding-top: 5px;
+  padding-left: 13px;
+  color: #4d4d4d;
 }
 .time {
   display: flex;

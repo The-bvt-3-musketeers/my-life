@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   collapse: boolean = true;
 
+  showFiller:boolean = false;
+  flippedArrow:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  flipArrow() {
+    this.flippedArrow = !this.flippedArrow;
   }
 
 }
