@@ -1,31 +1,66 @@
-<div class="coffee-head">
-  <img class= "coffee-photo d-flex justify-content-center" src="https://g.foolcdn.com/editorial/images/421803/coffee-with-froth-design-and-coffee-beans_soHhApC.jpg" alt="Latte with latte art and coffee beans">
-</div>
-<div class="row">
-  <div class="col">
-    <nav class="main-navbar navbar navbar-expand-sm navbar-light">
-      <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reminders</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Weather</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">NotePad</a>
-          </li>
-        </ul>
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+
+    <div class="icon-container">
+      <a routerLink="/" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/home.svg" alt="Weather icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Home</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="icon-container">
+      <a routerLink="/weather" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/weather.svg" alt="Weather icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Weather</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="icon-container">
+      <a routerLink="/calendar" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/calendar.svg" alt="Calendar icon" width="28px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Calendar</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="icon-container">
+      <a routerLink="/notepad" class="sidenav-link">
+        <div class="row justify-content-center side-nav">
+          <img src="../../assets/notepad.svg" alt="Notepad icon" width="35px">
+        </div>
+        <div class="row justify-content-center">
+          <p class="icon-label">Notepad</p>
+        </div>
+      </a>
+    </div>
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button class="open-nav" type="button" mat-button (click)="drawer.toggle(); flipArrow()">
+      <img *ngIf="flippedArrow === false" src="../../assets/double-right-arrow.svg" alt="Open sidenav icon" width="20px">
+      <img *ngIf="flippedArrow === true" src="../../assets/double-left-arrow.svg" alt="Open sidenav icon" width="20px">
+      <div class="row">
+        <p class="menu">Menu</p>
       </div>
-      </nav>
+    </button>
+
+    <div class="row component-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <div class="col time">
-    <app-date-pipe></app-date-pipe>
-  </div>
-</div>
+
+</mat-drawer-container>
+

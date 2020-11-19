@@ -14,8 +14,13 @@ import { CalendarComponent } from './calendar/calendar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { WeatherComponent } from './weather/weather.component';
+import { HomeComponent } from './home/home.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -29,7 +34,9 @@ FullCalendarModule.registerPlugins([
     DatePipeComponent,
     NotificationComponent,
     NotepadComponent,
-    CalendarComponent
+    CalendarComponent,
+    WeatherComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +45,8 @@ FullCalendarModule.registerPlugins([
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-
     FullCalendarModule,
-
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
