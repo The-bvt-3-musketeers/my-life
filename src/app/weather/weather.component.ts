@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherApiService } from './weather-api.service';
 
 @Component({
   selector: 'app-weather',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor() { }
+  lat;
+  lng;
+  locationData;
 
-  ngOnInit(): void {
+  constructor(private weatherService: WeatherApiService) { }
+
+  ngOnInit() {
+  }
+
+  sendToIpapi() {
+    this.weatherService.getCurrentLocationData()
+      .subscribe(data => {
+        this.locationData = data;
+        console.log(this.locationData);
+      })
   }
 
 }
