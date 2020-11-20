@@ -21,6 +21,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { WeatherComponent } from './weather/weather.component';
 import { HomeComponent } from './home/home.component';
+import { LauraComponent } from './laura/laura.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -36,7 +37,8 @@ FullCalendarModule.registerPlugins([
     NotepadComponent,
     CalendarComponent,
     WeatherComponent,
-    HomeComponent
+    HomeComponent,
+    LauraComponent
   ],
   imports: [
     BrowserModule,
