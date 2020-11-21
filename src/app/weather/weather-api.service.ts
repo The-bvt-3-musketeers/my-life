@@ -7,13 +7,14 @@ export class WeatherApiService {
 
   getCurrentLocationData() {
     return this.http.get(
-      'https://api.ipapi.com/api/161.185.160.93?access_key=807333ccddb7a7789bdf1406bab1be36'
+      'https://ipinfo.io?token=eb1de81e1f98ea'
     )
+
   }
 
-  getWeatherData() {
+  getWeatherData(userLatitude, userLongitude) {
     return this.http.get(
-      'https://api.weather.gov/points/{latitude},{longitude}'
+      'https://api.weatherbit.io/v2.0/current?key=371f57e0032f45aa980f9ff8ee74498e&units=I&lat=' + userLatitude + '&lon=' + userLongitude
       )
   }
 

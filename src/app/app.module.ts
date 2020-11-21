@@ -22,6 +22,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { WeatherComponent } from './weather/weather.component';
 import { HomeComponent } from './home/home.component';
 import { LauraComponent } from './laura/laura.component';
+import { WeatherApiService } from './weather/weather-api.service'
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -50,7 +51,7 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [WeatherApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
