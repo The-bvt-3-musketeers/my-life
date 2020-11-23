@@ -1,15 +1,21 @@
-<div class="form-group container">
-  <label>NotePad</label>
-  <textarea 
-  class="form-control notepad-text-area"
-  rows="5"
-  placeholder="What's on your mind?"
-  [(ngModel)]="notepadMessage"
-  ></textarea>
-  <button
-    mat-flat-button 
-    color="Accent"
-    (click)="submitNote()"
-  >Submit</button>
-  <p class="notes"> {{ newNote }} </p>
+<div class = "example-container">
+  <mat-form-field><input matInput [(ngModel)] = "titleModel" placeholder="Title"></mat-form-field>
+  <br>
+
+  <mat-form-field><input matInput [(ngModel)] = "contentModel" placeholder="Enter your content"></mat-form-field>
+  <br>
+
+  <mat-form-field><input matInput [(ngModel)] = "todoModel" placeholder="What to do"></mat-form-field>
 </div>
+
+<br>
+
+<button mat-raised-button color="accent" (click)="createNotepad()">Add Note</button>
+
+<hr>
+
+<p *ngFor= "let i of notepad">
+  <mat-card-title> {{ i.title }}</mat-card-title>
+  <mat-card> {{ i.content }}</mat-card>
+  <mat-card> {{ i.todo }}</mat-card>
+</p>
