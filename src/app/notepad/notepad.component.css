@@ -1,7 +1,15 @@
-.notepad-text-area {
+.notepad-textarea {
+  width: 400px;
   margin-bottom: 10px;
 }
 .notes {
   padding: 4px;
   width: auto;
+}
+p {
+  background-color: #e3f6f5;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }

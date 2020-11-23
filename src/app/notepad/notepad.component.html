@@ -1,15 +1,28 @@
-<div class="form-group container">
-  <label>NotePad</label>
-  <textarea 
-  class="form-control notepad-text-area"
-  rows="5"
-  placeholder="What's on your mind?"
-  [(ngModel)]="notepadMessage"
-  ></textarea>
-  <button
-    mat-flat-button 
-    color="Accent"
-    (click)="submitNote()"
-  >Submit</button>
-  <p class="notes"> {{ newNote }} </p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="form-group container">
+        <label>Notepad</label>
+        <textarea 
+        class="form-control notepad-textarea"
+        rows="5"
+        placeholder="What's on your mind?"
+        [(ngModel)]="notepadMessage"
+        ></textarea>
+        <button
+          mat-flat-button 
+          color="Accent"
+          (click)="submitNote()"
+        >Submit</button>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <p 
+        *ngFor="let notes of allNotes">
+        {{ notes }}
+    </p>
+  
+    </div>
+  </div>
+
 </div>

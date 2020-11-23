@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notepad.component.css']
 })
 export class NotepadComponent implements OnInit {
+  allNotes = [];
   notepadMessage: string;
-  newNote: string = '';
   constructor() { }
 
   ngOnInit(): void {
   }
   submitNote() {
-    this.newNote = this.notepadMessage
+    this.allNotes.push(this.notepadMessage)
+    console.log(this.allNotes)
   }
 }
