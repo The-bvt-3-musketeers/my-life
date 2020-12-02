@@ -1,3 +1,6 @@
+button {
+  width: 75px;
+}
 .notepad-textarea {
   width: 400px;
   margin-bottom: 10px;
@@ -6,10 +9,33 @@
   padding: 4px;
   width: auto;
 }
-p {
+ul.no-bullets {
+  list-style-type: none;
+}
+ul {
   background-color: #e3f6f5;
   color: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
   padding: 5px;
+  border-radius: 20px;
+}
+li {
+  display: flex;
+  justify-content: center;
+}
+.list-group {
+  padding: 0;
+}
+input {
+  width: 200px;
+}
+.input-fields {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+}
+.all-notes {
+  background-color: #e3f6f5;
 }

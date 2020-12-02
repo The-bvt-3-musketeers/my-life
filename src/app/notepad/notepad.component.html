@@ -1,13 +1,18 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-7">
-      <div class="form-group container">
+      <div class="form-group container input-fields">
+        <label>Title</label>
+        <input 
+          placeholder=""
+          type="text"
+          #titleInput>
         <label>Notepad</label>
         <textarea 
-        class="form-control notepad-textarea"
-        rows="5"
-        placeholder="What's on your mind?"
-        [(ngModel)]="notepadMessage"
+          class="form-control notepad-textarea"
+          rows="5"
+          placeholder="What's on your mind?"
+          #noteInput
         ></textarea>
         <button
           mat-flat-button 
@@ -17,10 +22,16 @@
       </div>
     </div>
     <div class="col-md-5">
-      <p 
-        *ngFor="let notes of allNotes">
-        {{ notes }}
-    </p>
+      <div class="note-sections">
+        <ul class="list-group">
+          <li 
+          class="list-group-item all-notes"
+          *ngFor="let notes of everyNote">
+          {{ notes.title }} <br> {{ notes.note }}
+          </li>
+        </ul>
+
+      </div>
   
     </div>
   </div>
